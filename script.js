@@ -13,11 +13,17 @@ function getPokemon(){
             console.log(data);
 
             let pokemonName = document.createElement("h3");
-            let pokemonID = document.createElement("h3");
+            let pokemonID = document.createElement("h2");
+            let pokemonSprite = document.createElement("img");
 
             pokemonName.textContent = data.name;
+            pokemonID.textContent = data.id;
+            pokemonSprite.setAttribute("src", data.sprites.front_default)
+
         
             pokemonContainerEl.appendChild(pokemonName)
+            pokemonContainerEl.appendChild(pokemonID)
+            pokemonContainerEl.appendChild(pokemonSprite)
         })
 
 
